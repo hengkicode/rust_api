@@ -22,14 +22,14 @@ async fn main() -> std::io::Result<()> {
     init_config();
     let pool = init_db().await;
 
-    info!("Server running at http://127.0.0.1:8080");
+    info!("Server running at http://127.0.0.1:8181");
 
     HttpServer::new(move || {
         App::new()
             .app_data(web::Data::new(pool.clone()))
             .configure(configure_routes)
     })
-    .bind("127.0.0.1:8080")?
+    .bind("127.0.0.1:8181")?
     .run()
     .await
 }
