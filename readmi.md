@@ -11,3 +11,7 @@
 ```bash
 git clone https://github.com/yourname/rust_api_starter.git
 cd rust_api_starter
+
+set RUST_LOG=info
+cargo run
+

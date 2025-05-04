@@ -8,13 +8,13 @@ pub struct User {
     pub email: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]  // Menambahkan derive Debug
 pub struct CreateUserRequest {
     pub name: String,
     pub email: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Debug)]  // Menambahkan derive Debug
 pub struct UpdateUserRequest {
     pub name: Option<String>,
     pub email: Option<String>,
